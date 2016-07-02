@@ -272,6 +272,7 @@ public:
   bool hasBrokenDebugInfo() const { return BrokenDebugInfo; }
 
   bool verify(const Function &F) {
+    F.dump();
     updateModule(F.getParent());
     Context = &M->getContext();
 
