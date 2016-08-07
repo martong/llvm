@@ -1,5 +1,8 @@
 #This branch is used to test -finstrument=mock compiler extension
 
+##Diff
+https://github.com/martong/llvm/compare/finstrument_mock_0...martong:finstrument_mock_test?expand=1
+
 ##Build on OSX
 
 Copy the compiler-rt lib (mock_san) to /usr/local/lib, so
