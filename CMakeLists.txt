@@ -56,6 +56,10 @@ project(LLVM
   ${cmake_3_0_LANGUAGES}
   C CXX ASM)
 
+#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fno-inline-functions -fsanitize=mock")
+#set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fno-inline-functions -fsanitize=mock")
+#set(CMAKE_EXE_LINKER_FLAGS  "${CMAKE_EXE_LINKER_FLAGS} -L /Users/mg/WORK/finstrument_mock/rt/finstrument_mock/build.release/compiler-rt/ -lmock_san -lstdc++")
+
 if(APPLE)
   if(NOT CMAKE_LIBTOOL)
     find_program(CMAKE_LIBTOOL NAMES libtool)
