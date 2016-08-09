@@ -30,8 +30,8 @@ compiler-rt does not conatin i386 symbols.
 Execute the tests:
 ```
 cd build.mock/unittest
-time for i in $(find . -perm +111 -type f); do; ./$i 2>&1; done | ag PASSED
+for i in $(find . -perm +111 -type f); do; ./$i 2>&1; done | ag "PASSED|test cases ran"
 cd build.mock/tools/clang/unittests
-time for i in $(find . -perm +111 -type f); do; ./$i 2>&1; done | ag PASSED
+for i in $(find . -perm +111 -type f); do; ./$i 2>&1; done | ag "PASSED|test cases ran"
 ```
 
